@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+
+<body>
+    <div  class="container h-100 d-flex justify-content-center" ng-app="myApp" ng-controller="voteCtrl">
+        <div class="container h-100 d-flex justify-content-center">
+            <h1 class="display-1">I am...</h1>
+            <br>
+        </div>
+        <div class="row  show-grid">
+            <div class="text-center font-weight-light col-xs-2" ng-init="femalePic = 'pic/female-icon.jpg'">
+                <p class="text-center font-weight-light">FEMALE</p>
+                <img  height="200" width="200" ng-src="{{femalePic}}">
+            </div>
+            <div class="text-center font-weight-light col-xs-2" ng-init="malePic = 'pic/male-icon.jpg'">
+                <p class="text-center font-weight-light">MALE</p>
+                <img  height="200" width="200" ng-src="{{malePic}}">
+            </div>
+        </div>
+
+        <div class="text-center font-weight-light col-xs-2">
+            Female: {{femaleCount}} <br> <h1 class="display-1" ng-style="customStyle.femalestyle"  >{{genderRate(femaleCount)}}</h1>
+            <br>
+            <button class="btn btn-success" ng-click="addFemale()"> &radic; Vote</button>
+        </div>
+        <div class="text-center font-weight-light col-xs-2">
+            Male: {{maleCount}}<br><h1 class="display-1" ng-style="customStyle.malestyle">{{genderRate(maleCount)}}</h1>
+    <br>
+    <button class="btn btn-success" ng-click="addMale()"> &radic; Vote </button>
+</div>
+    <script src="Votecontroller.js"></script>
+</div>
+</body>
+</html>
